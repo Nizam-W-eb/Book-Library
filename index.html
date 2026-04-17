@@ -7,17 +7,51 @@
     <title>Library</title>
 </head>
 <body>
+    <div class="book-form">
+        <form class="book-form" >
+            <div>
+              <label for="book-name">Name:</label>
+              <input type="text" class="book-value book-text" id="book-name" placeholder="Atomic Habits" required>
+            </div>
+            <div>
+              <label for="book-author">Author:</label>
+              <input type="text" class="book-value book-text" id="book-author" placeholder="James Clear" required>
+            </div>
+            <div>
+              <label for="book-pages">Pages:</label>
+              <input type="number" class="book-value book-text" id="book-pages" placeholder="399" required >
+            </div>
+            <div>
+              <label for="book-read">Have you read the book?</label>
+              <input type="checkbox" id="book-read" class="book=value" required >
+            </div>
+            <div>
+              <button class="book-submit" type="submit">Submit</button>
+              <button type="button">Cancel</button>
+            </div>
+        </form>
+    </div>
     <div class="header">
         <h1 class="title">Library</h1>
         <button class="button-add">Add Book</button>
     </div>
     <div class="main">
+        <div class="box">
+            <p class="box-title box-content">Name: Atomic Habits</p>
+            <p class="author box-content">Author: James Clear</p>
+            <p class="pages box-content">Pages: 234</p>
+            <P class="read box-content">Not read</P>
+        </div>   
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
-        
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
     </div>
     <script src="script.js"></script>
 </body>
