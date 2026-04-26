@@ -6,29 +6,28 @@ function Book(name, author, pages, read){
         this.author = author
         this.pages = pages
         this.read = read
-        this.code = crypto.randomUUID()
+        this.code = crypto.randomUUID();
         
     }
     else (
         console.error("please select corrct data type")
     )
    
-}
+};
 
+// the main function that gets the books value, checks it, creates a obj and get it into the UI.
 function addBookToLibrary(name, author, pages, read) {
     if(contains(library,name)){
-        console.error("the book already exists!"); 
+        alert("the book already exists!"); 
     }
     else{
       name = new Book(name, author, pages,read);
-      console.log(name)
       library.unshift(name);
       showcase(library);
     } 
-}
+};
 
-//showcase the books
-
+//showcase the books.
 let showcase = function (books){
 
     let shelf = document.querySelector(".main");
@@ -100,12 +99,11 @@ let contains = function(arr,word){
 let bookForm = document.querySelector(".book-form");
 let showButton = document.querySelector(".button-add");
 showButton.addEventListener("click", (a)=>{
-    bookForm.classList.toggle("disabled");
-    console.log("clicked");
+    bookForm.classList.remove("disabled");
+    console.log(bookForm)
 });
 
-// getting the data from form
-
+// getting the data from form.
 let formButton = document.querySelector(".book-submit");
 formButton.addEventListener("click", (a) => {
     a.preventDefault();
@@ -123,4 +121,14 @@ formButton.addEventListener("click", (a) => {
     else{
         addBookToLibrary(formName.value, formAuthor.value, formPages,formRead.checked);
     }
+});
+
+//remove the form via click on the cancel btn.
+let cancelBtn = document.querySelector(".book-cancel");
+cancelBtn.addEventListener("click", (a) => {
+    bookForm.classList.add("disabled");
 })
+
+
+//example:
+addBookToLibrary("Atmoic Habits", "James CLear", 345, true);

@@ -84,9 +84,7 @@ button:hover{
   text-align: center;
 }
 
-.book-form{
-    display: none;
-}
+
 
 .book-form{
     position: fixed;
@@ -107,9 +105,11 @@ button:hover{
     font-weight: bold;
     font-size: 1.4;
 }
+
 .disabled{
     display: none;
 }
+
 .book-text{
    
     color: #3B5249;
