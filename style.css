@@ -50,8 +50,8 @@ button:hover{
 }
 
 .box{
-    height: max(200px,15.6rem);
-    width: max(200px,15.6rem);
+    height: max(200px,16.6rem);
+    width: max(200px,16.6rem);
     background-color: #34252F;
     border-radius: 25px;
 }

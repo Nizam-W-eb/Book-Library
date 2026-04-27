@@ -42,19 +42,24 @@ let showcase = function (books){
       let bookAuthor = document.createElement("p");
       let bookPages = document.createElement("p");
       let bookRead = document.createElement("p");
+      let bookRemove = document.createElement("p");
 
       //adding box content class to the book datails
       bookName.classList.add("box-content");
       bookAuthor.classList.add("box-content");
       bookPages.classList.add("box-content");
       bookRead.classList.add("box-button", "box-content");
+      bookRemove.classList.add("box-button", "box-content");
+
       //appending the book details as the child of the box
       box.appendChild(bookName);
       box.appendChild(bookAuthor);
       box.appendChild(bookPages);
       box.appendChild(bookRead);
+      box.appendChild(bookRemove);
 
       //displaying the book details
+      bookRemove.innerText = "Remove";
       bookName.innerText = `Name: ${books[i].name}`;
       bookAuthor.innerText = `Author: ${books[i].author}`;
       bookPages.innerText = `Pages: ${books[i].pages}`;
@@ -64,7 +69,7 @@ let showcase = function (books){
       else if(books[i].read){
         bookRead.innerText = `Read`;
       }
-      console.log
+      //togging the read.
       bookRead.addEventListener("click", (a) => {
         if(bookRead.innerText === "Read"){
             bookRead.innerText = "Not read"
@@ -73,6 +78,11 @@ let showcase = function (books){
         else{
             bookRead.innerText = "Read";
         }
+      })
+      //remove the box when remove is clicked
+      bookRemove.addEventListener("click", (a) =>{
+         box.remove();
+         console.log("clicked");
       })
 
       console.log(box);
